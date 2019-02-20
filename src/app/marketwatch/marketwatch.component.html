@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="search-box">
+      <input type="text" name="searchScript" value="" placeholder="Search a script" class="quick-search" (keyup)="onKey($event)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="" *ngFor="let script of searchResult">
+        <!-- {{script.name}} - {{script.CMP}} -->
+        <app-script-row [script]="script" (scriptAddclick)="addScriptToList(script)"></app-script-row>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="" *ngFor="let script of watchlist">
+        <app-watchlist-row [script]="script" (scriptRemoveclick)="removeScriptFromList(script)"></app-watchlist-row>
+      </div>
+    </div>
+  </div>
+</div>
