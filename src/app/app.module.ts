@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import  { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { MarketwatchComponent } from './marketwatch/marketwatch.component';
 import { HoldingsComponent } from './holdings/holdings.component';
@@ -27,6 +28,7 @@ import { WatchlistRowComponent } from './marketwatch/watchlist-row/watchlist-row
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot()

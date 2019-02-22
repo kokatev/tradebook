@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-marketwatch',
@@ -9,20 +10,10 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 export class MarketwatchComponent implements OnInit {
 public modalRef: BsModalRef;
 public searchQuery: string;
-public scripts = [
-  {"name": "Infy", "CMP": "100.02"},
-  {"name": "ITI", "CMP": "140.02"},
-  {"name": "Idea", "CMP": "10.02"},
-  {"name": "BEPL", "CMP": "133.02"},
-  {"name": "Apollo", "CMP": "1040.02"},
-  {"name": "TCS", "CMP": "320.02"},
-  {"name": "Yesbank", "CMP": "110.02"},
-  {"name": "HCC", "CMP": "130.02"}
-];
+public scripts;
 searchResult = [];
 watchlist = [];
-  constructor() { }
-
+  constructor(private users: UsersService) { }
   public addScriptToList (script) {
     let found = false;
     this.watchlist.forEach(function (val){
@@ -57,5 +48,9 @@ watchlist = [];
     }
   }
   ngOnInit() {
+    this.users.getData().subscribe(data => {
+      this.scripts = data;
+      console.log(data);
+    })
   }
 }
