@@ -1,3 +1,10 @@
-<p>
-  holdings works and how!
-</p>
+<form action="" [formGroup]="buyScriptForm">
+
+<input type="text" formControlName="scriptName">
+<div *ngIf="submitted && buyScriptForm.controls.scriptName.errors" class="error">
+  <div *ngIf="buyScriptForm.controls.scriptName.errors.required">Your name is required</div>
+  <div *ngIf="buyScriptForm.controls.scriptName.errors.minlength">Name min length error</div>
+</div>
+
+<input type="number" formControlName="qty">
+</form>
