@@ -1,10 +1,30 @@
-<form action="" [formGroup]="buyScriptForm">
+<form action="" [formGroup]="buyScriptForm" (ngSubmit)="formSubmit()">
 
-<input type="text" formControlName="scriptName">
-<div *ngIf="submitted && buyScriptForm.controls.scriptName.errors" class="error">
-  <div *ngIf="buyScriptForm.controls.scriptName.errors.required">Your name is required</div>
-  <div *ngIf="buyScriptForm.controls.scriptName.errors.minlength">Name min length error</div>
-</div>
+  <input type="text" formControlName="scriptName">
+  <div *ngIf="submitted && f.scriptName.errors" class="error">
+    <div *ngIf="f.scriptName.errors.required">Your name is required</div>
+    <div *ngIf="f.scriptName.errors.minlength">Name min length error</div>
+    <div *ngIf="f.scriptName.pristine">Pristine</div>
+    <div *ngIf="f.scriptName.dirty">Dirty</div>
+    <div *ngIf="f.scriptName.untouched">untouched</div>
+    <div *ngIf="f.scriptName.touched">touched</div>
+    <div *ngIf="f.scriptName.valid">valid</div>
+    <div *ngIf="f.scriptName.invalid">invalid</div>
+    <div *ngIf="f.scriptName.pending">pending</div>
+  </div>
 
-<input type="number" formControlName="qty">
+  <input type="number" formControlName="qty">
+  <div *ngIf="submitted && f.scriptName.errors" class="error">
+    <div *ngIf="f.scriptName.errors.required">Your name is required</div>
+    <div *ngIf="f.scriptName.errors.minlength">Name min length error</div>
+    <div *ngIf="f.scriptName.pristine">Pristine</div>
+    <div *ngIf="f.scriptName.dirty">Dirty</div>
+    <div *ngIf="f.scriptName.untouched">untouched</div>
+    <div *ngIf="f.scriptName.touched">touched</div>
+    <div *ngIf="f.scriptName.valid">valid</div>
+    <div *ngIf="f.scriptName.invalid">invalid</div>
+    <div *ngIf="f.scriptName.pending">pending</div>
+  </div>
+  <input type="submit" value="submit">
 </form>
+<div *ngIf="success">Form submitted successfully!</div>

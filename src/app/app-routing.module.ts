@@ -5,7 +5,7 @@ import { HoldingsComponent } from './holdings/holdings.component';
 import { FundsComponent } from './funds/funds.component';
 
 const routes: Routes = [
-  { path: 'marketwatch', component: MarketwatchComponent },
+{ path: 'marketwatch', component: MarketwatchComponent },
 { path: 'holdings',      component: HoldingsComponent },
 { path: 'funds',      component: FundsComponent }
 ];

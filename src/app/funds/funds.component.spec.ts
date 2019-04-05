@@ -19,7 +19,7 @@ describe('FundsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create funds', () => {
     expect(component).toBeTruthy();
   });
 });

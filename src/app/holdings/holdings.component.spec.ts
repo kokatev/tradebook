@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { HoldingsComponent } from './holdings.component';
 
 describe('HoldingsComponent', () => {
@@ -8,7 +8,9 @@ describe('HoldingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HoldingsComponent ]
+      declarations: [ HoldingsComponent ],
+      imports:[ReactiveFormsModule],
+      providers: []
     })
     .compileComponents();
   }));

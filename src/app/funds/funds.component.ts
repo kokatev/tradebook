@@ -10,6 +10,7 @@ export class FundsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    alert('funds');
   }
 
 }
