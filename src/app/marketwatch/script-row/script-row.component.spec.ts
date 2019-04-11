@@ -16,6 +16,10 @@ describe('ScriptRowComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ScriptRowComponent);
     component = fixture.componentInstance;
+    component.script = {
+      name: "hffdkj",
+      CMP: 200
+    };
     fixture.detectChanges();
   });
 

@@ -1,7 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { UsersService } from '../users.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { MarketwatchComponent } from './marketwatch.component';
+import { ScriptRowComponent } from './script-row/script-row.component';
+import { WatchlistRowComponent } from './watchlist-row/watchlist-row.component';
 
 describe('MarketwatchComponent', () => {
   let component: MarketwatchComponent;
@@ -9,7 +11,8 @@ describe('MarketwatchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MarketwatchComponent ]
+      imports: [HttpClientModule],
+      declarations: [ MarketwatchComponent, ScriptRowComponent, WatchlistRowComponent ]
     })
     .compileComponents();
   }));
